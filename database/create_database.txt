@@ -1,0 +1,5 @@
+CREATE DATABASE mtt_db
+CHARSET = utf8
+COLLATE = utf8_unicode_ci;
+
+USE mtt_db;
