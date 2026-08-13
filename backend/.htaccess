@@ -1,0 +1,20 @@
+###############RESTRICT DIRECTORY ACCESS START################################
+
+IndexIgnore *
+
+Options -Indexes
+
+###############RESTRICT DIRECTORY ACCESS END################################
+
+
+###############REWRITE URL START################################
+
+RewriteEngine On
+
+#tickets/
+RewriteRule ^([^/]+)/?$ index.php?app=$1 [L,QSA]
+
+#tickets/:id or tickets/stats
+RewriteRule ^([^/]+)/([^/]+)/?$ index.php?app=$1&id=$2 [L,QSA]
+
+###############REWRITE URL END################################
